@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c49906b727.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .card {
+      border-radius: 30px;
+      position: relative;
+      bottom: 40px;
+    }
+
+    .ab .image img {
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    .ab {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .about .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .demo {
+      position: relative;
+      border: 2px solid transparent;
+      border-radius: 30px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+      overflow: hidden;
+    }
+
+
+    .demo:hover {
+      border-color: rgb(214, 122, 3);
+
+      transform: scale(1.05);
+
+    }
+
+
+    .product .image1 .content:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .product .image2 .content:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .product .image3 .content:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .product .image1 {
+      position: relative;
+      background: url("./img/1\ \(1\).png");
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    .product .image2 {
+      position: relative;
+      background: url("./img/2\ \(1\).png");
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    .product .image3 {
+      position: relative;
+      background: url("./img/3\ \(1\).png");
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    .product .demo .content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: rgba(255, 204, 137, 0.8);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .product .image1:hover .content,
+    .product .image2:hover .content,
+    .product .image3:hover .content {
+      background-color: rgba(255, 255, 255, 1);
+      transform: scale(1.05);
+    }
+
+    .content i,
+    .content h6 {
+      color: #28a745;
+      transition: color 0.3s ease;
+    }
+
+    .content:hover i,
+    .content:hover h6 {
+      color: #ff9800;
+    }
+
+
+
+    .card1 {
+      background-color: rgb(244, 218, 183);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .card2 {
+      background-color: rgb(244, 218, 183);
+      border-radius: 30px;
+    }
+
+
+    .footer {
+      height: 75vh;
+      background: url('./img/BOTTOM.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .main .demo {
+        width: 40%;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .ab .image {
+        width: 50%;
+      }
+
+      .ab .card {
+        width: 50%;
+        height: 250px;
+        top: 150px;
+        right: 100px;
+      }
+
+      .main .demo {
+        width: 30%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container cards">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+        <img src="./img/Counter_1.png" class="img-fluid" alt="" />
+        <h1 class="display-1 text-warning">9,124,624</h1>
+        <h1 class="fw-bold">Plants Delivered</h1>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+        <img src="./img/Counter_2.png" class="img-fluid" alt="" />
+        <h1 class="display-1 text-warning">9,124,624</h1>
+        <h1 class="fw-bold">Plants Delivered</h1>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+        <img src="./img/Counter_3.png" class="img-fluid" alt="" />
+        <h1 class="display-1 text-warning">9,124,624</h1>
+        <h1 class="fw-bold">Plants Delivered</h1>
+      </div>
+    </div>
+  </div>
+  <!-- card page end  -->
+  <div class="container about">
+    <h2 class="fw-bold text-success text-center mt-5">About us</h2>
+    <h1 class="text-warning text-center display-1">
+      Our <span class="fw-bold">Core </span> Team <br />
+      And Their <span class="fw-bold">Philosophy</span>
+    </h1>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 text-center">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          saepe hic minima vitae suscipit! Commodi, consequatur, id eveniet
+          sunt, rerum minima optio quidem natus blanditiis libero ratione nam
+          amet est.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 text-center">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias
+          facilis excepturi rerum totam natus nulla labore hic maiores
+          laboriosam quia provident, nobis consequuntur laudantium delectus
+          explicabo ex itaque autem voluptas!
+        </p>
+      </div>
+    </div>
+    <div class="ab">
+      <div class="image">
+        <img src="./img/badhon.png" alt="" />
+      </div>
+      <div class="card border border-warning">
+        <h2 class="fw-bold text-success text-center">Meet Badhon</h2>
+        <p class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatibus assumenda dolor voluptates? Ratione cum vero ducimus,
+          ab cumque voluptates natus, eligendi voluptate est reiciendis
+          beatae?
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- about page end  -->
+  <div class="container product">
+    <h5 class="text-center text-success fw-bold">Our Products</h5>
+    <h1 class="text-warning text-center display-1">
+      <span class="fw-bold">New</span> Arrival
+    </h1>
+    <div class="main">
+      <div class="demo">
+        <div class="image1">
+          <div class="content">
+            <div class="first">
+              <i class="fa-solid fa-cart-shopping my-3 ms-4 display-6"></i>
+              <h6 class="fw-bold fs-5">add to wishlist</h6>
+            </div>
+            <div class="second">
+              <i class="fa-solid fa-heart display-6 my-3 ms-4"></i>
+              <h6 class="fw-bold fs-5">add to cart</h6>
+            </div>
+          </div>
+        </div>
+        <div class="card1">
+          <h3 class="text-success text-center">Philodendron</h3>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            voluptatibus eos fuga provident repellat esse quibusdam delectus
+            inventore quam odio.
+          </p>
+        </div>
+      </div>
+      <div class="demo">
+        <div class="image2">
+          <div class="content">
+            <div class="first">
+              <i class="fa-solid fa-cart-shopping my-3 ms-4 display-6"></i>
+              <h6 class="fw-bold fs-5">add to wishlist</h6>
+            </div>
+            <div class="second">
+              <i class="fa-solid fa-heart display-6 my-3 ms-4"></i>
+              <h6 class="fw-bold fs-5">add to cart</h6>
+            </div>
+          </div>
+        </div>
+        <div class="card1">
+          <h3 class="text-center">Philodendron</h3>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            voluptatibus eos fuga provident repellat esse quibusdam delectus
+            inventore quam odio.
+          </p>
+        </div>
+      </div>
+      <div class="demo">
+        <div class="image3">
+          <div class="content">
+            <div class="first">
+              <i class="fa-solid fa-cart-shopping my-3 ms-4 display-6"></i>
+              <h6 class="fw-bold fs-5">add to wishlist</h6>
+            </div>
+            <div class="second">
+              <i class="fa-solid fa-heart display-6 my-3 ms-4"></i>
+              <h6 class="text-success fw-bold fs-5">add to cart</h6>
+            </div>
+          </div>
+        </div>
+        <div class="card1">
+          <h3 class="text-center">Philodendron</h3>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            voluptatibus eos fuga provident repellat esse quibusdam delectus
+            inventore quam odio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- product page end  -->
+
+  <div class="container review">
+    <h5 class="text-center text-success fw-bold my-5">Review</h5>
+    <h1 class="text-warning text-center display-1">
+      Some Words From <br />
+      Our <span class="fw-bold">Lovely Customers</span>
+    </h1>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="row">
+          <div class="col-12 my-1">
+            <div class="row card2 py-3">
+              <div class="col-3">
+                <img src="./img/1 (2).png" class="img-fluid" alt="" />
+              </div>
+              <div class="col-9">
+                <div class="stars">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam nulla aiores.
+
+                </p>
+                <h4 class="fw-bold text-success">Ashoka Tano</h4>
+                <p>FireFighter</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row card2 py-3">
+              <div class="col-3">
+                <img src="./img/1 (2).png" class="img-fluid" alt="" />
+              </div>
+              <div class="col-9 my-1">
+                <div class="stars">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam nulla aiores.
+
+                </p>
+                <h4 class="fw-bold text-success">Ashoka Tano</h4>
+                <p>FireFighter</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-1">
+            <div class="row card2 py-3">
+              <div class="col-3">
+                <img src="./img/1 (2).png" class="img-fluid" alt="" />
+              </div>
+              <div class="col-9">
+                <div class="stars">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam nulla aiores.
+
+                </p>
+                <h4 class="fw-bold text-success">Ashoka Tano</h4>
+                <p>FireFighter</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <img src="./img/loveletter.png " class="img-fluid d-none d-lg-block" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- footer  -->
+  <!-- <div class="container footer">
+    <div class="logo mt-5">
+      <img src="./img/Footer_logo.png" class="img-fluid w-50" alt="">
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-4 mt-5">
+        <ul>
+          <li class="fw-bold text-light my-3">home</li>
+          <li class="fw-bold text-light my-3">about</li>
+          <li class="fw-bold text-light my-3">catalog</li>
+          <li class="fw-bold text-light my-3">review</li>
+          <li class="fw-bold text-light my-3">support</li>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-4 mt-5">
+        <h5 class="fw-bold ms-4">User Account</h5>
+        <ul>
+          <li class="fw-bold text-light my-3">sign up</li>
+          <li class="fw-bold text-light my-3">Login</li>
+          <li class="fw-bold text-light my-3">edit profile</li>
+          <li class="fw-bold text-light my-3">history</li>
+          <li class="fw-bold text-light my-3">refund</li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="row">
+          <div class="col-6 col-sm-12 mb-4">
+            <h5 class="text-light fw-bold">Follow Us At</h5>
+            <i class="fa-brands fa-square-facebook text-light m-1 fs-3"></i>
+            <i class="fa-brands fa-linkedin text-light m-1 fs-3"></i>
+            <i class="fa-brands fa-square-twitter text-light m-1 fs-3"></i>
+            <i class="fa-brands fa-square-youtube text-light m-1 fs-3"></i>
+          </div>
+          <div class="col-6 col-sm-12">
+            <h5 class="text-light fw-bold">Contact</h5>
+            <p class="text-light">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container footer">
+    <div class="logo mt-5">
+      <img src="./img/Footer_logo.png" class="img-fluid w-50" alt="">
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-4 mt-5">
+        <ul>
+          <li class="fw-bold text-light my-3">home</li>
+          <li class="fw-bold text-light my-3">about</li>
+          <li class="fw-bold text-light my-3">catalog</li>
+          <li class="fw-bold text-light my-3">review</li>
+          <li class="fw-bold text-light my-3">support</li>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-4 mt-5">
+        <h5 class="fw-bold ms-4">User Account</h5>
+        <ul>
+          <li class="fw-bold text-light my-3">sign up</li>
+          <li class="fw-bold text-light my-3">Login</li>
+          <li class="fw-bold text-light my-3">edit profile</li>
+          <li class="fw-bold text-light my-3">history</li>
+          <li class="fw-bold text-light my-3">refund</li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4">
+        <!-- Flex container for vertical alignment -->
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div>
+            <h5 class="text-light fw-bold">Follow Us At</h5>
+            <i class="fa-brands fa-square-facebook text-light m-1 fs-3"></i>
+            <i class="fa-brands fa-linkedin text-light m-1 fs-3"></i>
+            <i class="fa-brands fa-square-twitter text-light m-1 fs-3"></i>
+            <i class="fa-brands fa-square-youtube text-light m-1 fs-3"></i>
+          </div>
+          <div>
+            <h5 class="text-light fw-bold">Contact</h5>
+            <p class="text-light">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>
